@@ -74,7 +74,7 @@
 
 //     public function diagonale($base, $altezza)
 //     {
-        
+
 //         $result = $this->sqr($this->sum($this->mul($base,$base),$this->mul($altezza,$altezza)));
 //         echo "il risultato del calcolo della diagonale per il tuo rettangolo è: $result\n";
 //     }
@@ -87,13 +87,13 @@
 //         {
 //             case 1: $rettangolo->area($rettangolo->base, $rettangolo->altezza);
 //             break;
-        
+
 //             case 2: $rettangolo->perimetro($rettangolo->base, $rettangolo->altezza);
 //             break;
-        
+
 //             case 3: $rettangolo->diagonale($rettangolo->base, $rettangolo->altezza);
 //             break;
-        
+
 //         }
 //         $risp = readline("Vuoi effettuare un'altra operazione?\nSI, digita 1\nNO digita 0:\n");
 //         return $risp;
@@ -111,155 +111,232 @@
 
 //ESERCIZIO 3
 
-abstract class CapoSuperiore
+// abstract class CapoSuperiore
+// {
+//     abstract public function capoSuperioreType();
+// }
+
+// class Maglietta extends CapoSuperiore{
+//     public function capoSuperioreType()
+//     {
+//         echo "Maglietta\n";
+//     }
+// }
+
+// class Maglione extends CapoSuperiore{
+//     public function capoSuperioreType()
+//     {
+//         echo "Maglione\n";
+//     }
+// }
+
+// class Felpa extends CapoSuperiore{
+//     public function capoSuperioreType()
+//     {
+//         echo "Felpa\n";
+//     }
+// }
+
+// class Dolcevita extends CapoSuperiore{
+//     public function capoSuperioreType()
+//     {
+//         echo "Dolcevita\n";
+//     }
+// }
+
+// abstract class CapoInferiore
+// {
+//     abstract public function capoInferioreType();
+// }
+
+// class Jeans extends CapoInferiore{
+//     public function capoInferioreType()
+//     {
+//         echo "Jeans\n";
+//     }
+// }
+
+// class PantaloneTuta extends CapoInferiore{
+//     public function capoInferioreType()
+//     {
+//         echo "Pantalone tuta\n";
+//     }
+// }
+
+// class PantaloneElegante extends CapoInferiore{
+//     public function capoInferioreType()
+//     {
+//         echo "Pantalone elegante\n";
+//     }
+// }
+
+// class Bermuda extends CapoInferiore{
+//     public function capoInferioreType()
+//     {
+//         echo "Bermuda\n";
+//     }
+// }
+
+// abstract class Scarpe{
+//     abstract public function scarpeType();
+// } 
+
+// class Mocassino extends Scarpe{
+//     public function scarpeType()
+//     {
+//         echo "Mocassino\n";
+//     }
+// }
+// class ScarpeGinnastica extends Scarpe{
+//     public function scarpeType()
+//     {
+//         echo "Scarpe da ginnastica\n";
+//     }
+// }
+// class Stivaletto extends Scarpe{
+//     public function scarpeType()
+//     {
+//         echo "Stivaletto\n";
+//     }
+// }
+// class Sandali extends Scarpe{
+//     public function scarpeType()
+//     {
+//         echo "Sandali\n";
+//     }
+// }
+
+// abstract class Accessori{
+//     abstract public function accessoriType();
+// }
+
+// class Cintura extends Accessori 
+// {
+//     public function accessoriType()
+//     {
+//         echo "Cintura\n";
+//     }
+// }
+
+// class Cappello extends Accessori 
+// {
+//     public function accessoriType()
+//     {
+//         echo "Cappello\n";
+//     }
+// }
+
+// class OcchialiSole extends Accessori 
+// {
+//     public function accessoriType()
+//     {
+//         echo "Occhiali da sole\n";
+//     }
+// }
+
+// class Sciarpa extends Accessori 
+// {
+//     public function accessoriType()
+//     {
+//         echo "Sciarpa\n";
+//     }
+// }
+
+
+// class Outfit{
+//     public $capoSupueriore, $capoInferiore, $scarpa, $accessorio;
+//     public function __construct(CapoSuperiore $capoSuperiore, CapoInferiore $capoInferiore, Scarpe $scarpa, Accessori $accessorio)
+//     {
+//         $this->capoSupueriore = $capoSuperiore;
+//         $this->capoInferiore = $capoInferiore;
+//         $this->scarpa = $scarpa;
+//         $this->accessorio = $accessorio;
+//     }
+// }
+
+// $abbigliamento = new Outfit(new Maglione, new Jeans, new ScarpeGinnastica, new Cappello);
+
+// $abbigliamento->capoSupueriore->capoSuperioreType();
+// $abbigliamento->capoInferiore->capoInferioreType();
+// $abbigliamento->scarpa->scarpeType();
+// $abbigliamento->accessorio->accessoriType();
+
+// ESERCIZIO 4
+
+abstract class Defense
 {
-    abstract public function capoSuperioreType();
+    abstract public function mostraSpecialitaDifesa();
 }
 
-class Maglietta extends CapoSuperiore{
-    public function capoSuperioreType()
-    {
-        echo "Maglietta\n";
-    }
-}
-
-class Maglione extends CapoSuperiore{
-    public function capoSuperioreType()
-    {
-        echo "Maglione\n";
-    }
-}
-
-class Felpa extends CapoSuperiore{
-    public function capoSuperioreType()
-    {
-        echo "Felpa\n";
-    }
-}
-
-class Dolcevita extends CapoSuperiore{
-    public function capoSuperioreType()
-    {
-        echo "Dolcevita\n";
-    }
-}
-
-abstract class CapoInferiore
+class ScudoRespingente extends Defense
 {
-    abstract public function capoInferioreType();
-}
-
-class Jeans extends CapoInferiore{
-    public function capoInferioreType()
+    public function mostraSpecialitaDifesa()
     {
-        echo "Jeans\n";
+        echo "Mi difendo utilizzando lo scudo che respinge i tuoi attacchi!\n";
     }
 }
-
-class PantaloneTuta extends CapoInferiore{
-    public function capoInferioreType()
-    {
-        echo "Pantalone tuta\n";
-    }
-}
-
-class PantaloneElegante extends CapoInferiore{
-    public function capoInferioreType()
-    {
-        echo "Pantalone elegante\n";
-    }
-}
-
-class Bermuda extends CapoInferiore{
-    public function capoInferioreType()
-    {
-        echo "Bermuda\n";
-    }
-}
-
-abstract class Scarpe{
-    abstract public function scarpeType();
-} 
-
-class Mocassino extends Scarpe{
-    public function scarpeType()
-    {
-        echo "Mocassino\n";
-    }
-}
-class ScarpeGinnastica extends Scarpe{
-    public function scarpeType()
-    {
-        echo "Scarpe da ginnastica\n";
-    }
-}
-class Stivaletto extends Scarpe{
-    public function scarpeType()
-    {
-        echo "Stivaletto\n";
-    }
-}
-class Sandali extends Scarpe{
-    public function scarpeType()
-    {
-        echo "Sandali\n";
-    }
-}
-
-abstract class Accessori{
-    abstract public function accessoriType();
-}
-
-class Cintura extends Accessori 
+class DoppiaSchivata extends Defense
 {
-    public function accessoriType()
+    public function mostraSpecialitaDifesa()
     {
-        echo "Cintura\n";
+        echo "Mi difendo schivando 2 dei tuoi attacchi!\n";
     }
 }
-
-class Cappello extends Accessori 
+class Teletrasporto extends Defense
 {
-    public function accessoriType()
+    public function mostraSpecialitaDifesa()
     {
-        echo "Cappello\n";
+        echo "Mi difendo teletrasportandomi in un altro posto!\n";
     }
 }
-
-class OcchialiSole extends Accessori 
+class Volo extends Defense
 {
-    public function accessoriType()
+    public function mostraSpecialitaDifesa()
     {
-        echo "Occhiali da sole\n";
+        echo "MI difendo spiccando il volo!\n";
     }
 }
 
-class Sciarpa extends Accessori 
+abstract class Attack
 {
-    public function accessoriType()
+    abstract public function mostraSpecialitaAttacco();
+}
+
+class PugnoMortale extends Attack
+{
+    public function mostraSpecialitaAttacco() 
     {
-        echo "Sciarpa\n";
+        echo "Ti attacco con un pugno letale!\n";    
+    }
+}
+class SferaInfuocata extends Attack
+{
+    public function mostraSpecialitaAttacco() 
+    {
+        echo "Ti attacco lanciandoti una palla di fuoco!\n";    
+    }
+}
+class CalcioVolante extends Attack
+{
+    public function mostraSpecialitaAttacco() 
+    {
+        echo "Ti attacco tirandoti un calcio al volo!\n";    
     }
 }
 
 
-class Outfit{
-    public $capoSupueriore, $capoInferiore, $scarpa, $accessorio;
-    public function __construct(CapoSuperiore $capoSuperiore, CapoInferiore $capoInferiore, Scarpe $scarpa, Accessori $accessorio)
+class IronMan
+{
+    public $attack, $defense;
+
+    public function __construct(Attack $attack, Defense $defense)
     {
-        $this->capoSupueriore = $capoSuperiore;
-        $this->capoInferiore = $capoInferiore;
-        $this->scarpa = $scarpa;
-        $this->accessorio = $accessorio;
+        $this->attack = $attack;
+        $this->defense = $defense;
     }
 }
 
-$abbigliamento = new Outfit(new Maglione, new Jeans, new ScarpeGinnastica, new Cappello);
+$azione = new IronMan(new SferaInfuocata,new ScudoRespingente);
 
-$abbigliamento->capoSupueriore->capoSuperioreType();
-$abbigliamento->capoInferiore->capoInferioreType();
-$abbigliamento->scarpa->scarpeType();
-$abbigliamento->accessorio->accessoriType();
-
-
-
+$azione->attack->mostraSpecialitaAttacco();
+$azione->defense->mostraSpecialitaDifesa();
